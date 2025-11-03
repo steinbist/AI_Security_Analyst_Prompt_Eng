@@ -1,0 +1,25 @@
+{
+  // VS Code debug configuration for FastAPI (Uvicorn) backend
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "FastAPI: Run Server (reload)",
+      "type": "python",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": [
+        "app.main:app",
+        "--reload",
+        "--host", "127.0.0.1",
+        "--port", "8000"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "env": {
+        "PYTHONUNBUFFERED": "1",
+      },
+      "envFile": "${workspaceFolder}/.venv/.env"
+    }
+  ]
+}

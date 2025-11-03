@@ -1,0 +1,5 @@
+﻿fastapi
+uvicorn[standard]
+openai>=1.40.0
+pydantic>=2.6
+python-dotenv
