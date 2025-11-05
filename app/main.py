@@ -27,6 +27,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 # Fully-qualified imports so module resolution is stable under uvicorn
 from app.route.analyze_route import router as analyze_router
+from app.route.auth_route import router as auth_router
 from app.data.db_config import init_db
 
 APP_ROOT = Path(__file__).resolve().parent
@@ -68,6 +69,7 @@ def create_app() -> FastAPI:
 
     # Include API routes
     app.include_router(analyze_router)
+    app.include_router(auth_router)
 
     @app.get("/", tags=["root"])
     def root():
