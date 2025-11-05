@@ -103,6 +103,7 @@ pydantic>=2.6
 python-dotenv
 requests
 streamlit
+bcrypt>=5.0
 
 🧑‍💻 Author
 Tim Steinbis
